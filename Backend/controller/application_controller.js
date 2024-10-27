@@ -149,8 +149,6 @@ const updateStatus=async(req,res)=>{
         return res.status(200).json({ msg: "status updated successfully" })
 
 
-
-
     }
     catch(e){
         console.log(e)

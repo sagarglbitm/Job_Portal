@@ -13,12 +13,14 @@ const  jwt =require("jsonwebtoken")
         if(!decode){
             return res.status(401).json({msg:"invalid token"})
         }
+        console.log(decode)
 
-        req._id=decode.userId;
+        req._id=decode.userId
         next()
 
     }
     catch(e){
+        return res.status(500).json({ msg: "Internal Server Error" })
 
     }
 
